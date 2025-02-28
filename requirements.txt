@@ -1,0 +1,5 @@
+loguru~=0.7.3
+mysql-connector-python~=8.0.28
+PyYAML~=6.0.2
+RestrictedPython~=8.0
+requests
