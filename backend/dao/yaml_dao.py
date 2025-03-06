@@ -43,4 +43,4 @@ class YamlDAO(BaseDAO):
 
     def list_all(self) -> List[Dict]:
         """列出所有配置"""
-        return self._execute_read("SELECT rule_name, yaml_name, created_at FROM stored_yamls")
+        return self._execute_read("SELECT rule_name, yaml_name, yaml_code, created_at FROM stored_yamls")

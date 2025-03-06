@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 from loguru import logger
-from core.conf import settings
+from backend.core.conf import settings
 
 
 class Logger:

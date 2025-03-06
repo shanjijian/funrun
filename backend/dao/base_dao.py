@@ -1,7 +1,7 @@
 from mysql.connector import connect, Error
 from typing import Optional, Dict, List
-from common.log import log
-from core.conf import settings
+from backend.common.log import log
+from backend.core.conf import settings
 
 
 class BaseDAO:

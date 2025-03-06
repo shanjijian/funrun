@@ -1,7 +1,7 @@
 from typing import Any, Tuple
 
-from core.conf import settings
-from dao.function_dao import FunctionDAO
+from backend.core.conf import settings
+from backend.dao.function_dao import FunctionDAO
 
 
 class FunctionExecutor:
@@ -64,7 +64,6 @@ class FunctionExecutor:
         """执行函数通用逻辑"""
         code_str = func_record['function_code']
         func_name = func_record['function_name']
-
         # 编译获取函数对象
         func, error = self._execute_code(code_str, func_name)
         if error:
@@ -72,7 +71,7 @@ class FunctionExecutor:
 
         # 执行目标函数
         try:
-            result = func(**data)
+            result = func(data)
             return result
         except Exception as e:
             return f"Function runtime error: {str(e)}"

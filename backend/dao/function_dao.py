@@ -43,5 +43,5 @@ class FunctionDAO(BaseDAO):
 
     def list_all(self) -> List[Dict]:
         """列出所有函数"""
-        return self._execute_read("SELECT rule_name, function_name, created_at FROM stored_functions")
+        return self._execute_read("SELECT rule_name, function_name, function_code, created_at FROM stored_functions")
     
